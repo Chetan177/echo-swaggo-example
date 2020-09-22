@@ -2,7 +2,6 @@ package controller
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/http"
 	"strconv"
 
@@ -154,7 +153,7 @@ func (c *Controller) DeleteAccount(ctx echo.Context)  error {
 		return httputil.NewError(ctx, http.StatusNotFound, err)
 
 	}
-	return ctx.JSON(http.StatusNoContent, gin.H{})
+	return ctx.JSON(http.StatusNoContent,`{}`)
 }
 
 // UploadAccountImage godoc
